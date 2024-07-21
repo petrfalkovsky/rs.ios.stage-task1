@@ -10,8 +10,14 @@
 
 @implementation OddNumbers
 
-- (NSInteger)oddNumbers:(NSArray <NSNumber *> *)array {
-    return -1;
+- (NSInteger)oddNumbers:(NSArray<NSNumber *> *)collection {
+    NSInteger oddResult = 0;
+    for (NSNumber *number in collection) {
+        if ([number integerValue] %2 !=0) {
+            oddResult++;
+        }
+    }
+    return oddResult;
 }
 
 @end
